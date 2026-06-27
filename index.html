@@ -304,16 +304,18 @@
   }
 
   /* i18n: hide non-active lang */
-  [data-lang="en"] { display: none; }
-  body.lang-en [data-lang="cs"] { display: none; }
+  [data-lang] { display: none; }
+  body.lang-cs [data-lang="cs"] { display: revert; }
   body.lang-en [data-lang="en"] { display: revert; }
+  body.lang-uk [data-lang="uk"] { display: revert; }
 </style>
 </head>
-<body>
+<body class="lang-cs">
 
 <nav class="lang-bar">
   <button class="lang-btn active" onclick="setLang('cs')" id="btn-cs">CZ</button>
   <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+  <button class="lang-btn" onclick="setLang('uk')" id="btn-uk">UA</button>
 </nav>
 
 <header class="hero">
@@ -322,11 +324,15 @@
     <div class="hero-name">Anastasiia Koleinyk</div>
     <div class="hero-title" data-lang="cs">Specialistka L2 technické podpory &amp; Billing</div>
     <div class="hero-title" data-lang="en">L2 Technical Support &amp; Billing Specialist</div>
+    <div class="hero-title" data-lang="uk">Спеціаліст L2 техпідтримки та білінгу</div>
     <p class="hero-summary" data-lang="cs">
       Více než 5 let zkušeností ve správě předplatného, billingových procesů a řešení incidentů v rámci SLA. Spolehlivá, detailní a vysoce adaptabilní na dynamické provozní procesy.
     </p>
     <p class="hero-summary" data-lang="en">
       Over 5 years of experience in subscription management, billing processes, and SLA-driven incident resolution. Reliable, detail-oriented, and highly adaptable to dynamic operational environments.
+    </p>
+    <p class="hero-summary" data-lang="uk">
+      Понад 5 років досвіду в управлінні підписками, білінгових процесах і вирішенні інцидентів у межах SLA. Надійна, уважна до деталей і добре адаптуюся до динамічних робочих процесів.
     </p>
     <div class="hero-contacts">
       <a href="mailto:stalchenkoanastasiya@gmail.com">
@@ -339,7 +345,7 @@
       </a>
       <a href="#">
         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-        Praha, Czechia
+        <span data-lang="cs">Praha, Česko</span><span data-lang="en">Prague, Czechia</span><span data-lang="uk">Прага, Чехія</span>
       </a>
     </div>
   </div>
@@ -411,6 +417,40 @@
             <li>Managed high volumes of inbound customer queries.</li>
             <li>Provided guidance on services, plans, and promotions.</li>
             <li>Assisted users with account and subscription operations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE UK -->
+    <section class="section fade-in" data-lang="uk">
+      <div class="section-label">Досвід роботи</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="job-header">
+            <div class="job-title">Operations / Billing Operations Specialist</div>
+            <div class="job-company">Global Bilgi — Україна</div>
+            <div class="job-period">06/2019 – 12/2025</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Вирішення складних кейсів з білінгу та послуг за допомогою CRM, SQL, BPM та API-систем.</li>
+            <li>Розслідування фінансових розбіжностей і технічних проблем під час активації та використання послуг.</li>
+            <li>Співпраця з L3, розробниками та партнерськими командами для швидкого усунення інцидентів.</li>
+            <li>Дотримання SLA та точне ведення клієнтських і білінгових даних.</li>
+            <li>Навчання та менторинг понад 20 нових спеціалістів, які успішно пройшли випробувальний термін.</li>
+            <li>Автоматизація рутинних задач за допомогою Excel та інструментів Adobe.</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="job-header">
+            <div class="job-title">Customer Support Specialist</div>
+            <div class="job-company">Global Bilgi</div>
+            <div class="job-period">08/2014 – 06/2019</div>
+          </div>
+          <ul class="job-bullets">
+            <li>Обробка великого обсягу вхідних звернень клієнтів.</li>
+            <li>Консультування щодо послуг, тарифів та акцій.</li>
+            <li>Підтримка користувачів в операціях з рахунками та підписками.</li>
           </ul>
         </div>
       </div>
@@ -519,26 +559,78 @@
       </div>
     </div>
 
+    <!-- SKILLS UK -->
+    <div class="sidebar-block fade-in" data-lang="uk">
+      <div class="section-label">Навички</div>
+
+      <div class="skill-group">
+        <div class="skill-category">Білінг та операції</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Білінгові процеси</span>
+          <span class="skill-tag">SLA</span>
+          <span class="skill-tag">Ескалація інцидентів</span>
+          <span class="skill-tag">Управління підписками</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Аналіз</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Аналіз першопричин</span>
+          <span class="skill-tag">Оптимізація процесів</span>
+          <span class="skill-tag">Фінансові дані</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Інструменти</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">CRM</span>
+          <span class="skill-tag">BPM</span>
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Helpdesk</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">AI-інструменти</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-category">Soft skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Вирішення проблем</span>
+          <span class="skill-tag">Уважність</span>
+          <span class="skill-tag">Менторинг</span>
+          <span class="skill-tag">Міжкомандна комунікація</span>
+        </div>
+      </div>
+    </div>
+
     <!-- LANGUAGES -->
     <div class="sidebar-block fade-in">
       <div class="section-label" data-lang="cs">Jazyky</div>
       <div class="section-label" data-lang="en">Languages</div>
+      <div class="section-label" data-lang="uk">Мови</div>
       <div class="lang-item">
-        <span data-lang="cs">Ukrajinština</span><span data-lang="en">Ukrainian</span>
+        <span data-lang="cs">Ukrajinština</span><span data-lang="en">Ukrainian</span><span data-lang="uk">Українська</span>
         <span class="lang-level" data-lang="cs">Rodný jazyk</span>
         <span class="lang-level" data-lang="en">Native</span>
+        <span class="lang-level" data-lang="uk">Рідна мова</span>
       </div>
       <div class="lang-item">
-        <span data-lang="cs">Ruština</span><span data-lang="en">Russian</span>
+        <span data-lang="cs">Ruština</span><span data-lang="en">Russian</span><span data-lang="uk">Російська</span>
         <span class="lang-level" data-lang="cs">Plynně</span>
         <span class="lang-level" data-lang="en">Fluent</span>
+        <span class="lang-level" data-lang="uk">Вільно</span>
       </div>
       <div class="lang-item">
-        <span data-lang="cs">Angličtina</span><span data-lang="en">English</span>
+        <span data-lang="cs">Angličtina</span><span data-lang="en">English</span><span data-lang="uk">Англійська</span>
         <span class="lang-level">B2</span>
       </div>
       <div class="lang-item">
-        <span data-lang="cs">Čeština</span><span data-lang="en">Czech</span>
+        <span data-lang="cs">Čeština</span><span data-lang="en">Czech</span><span data-lang="uk">Чеська</span>
         <span class="lang-level">B2</span>
       </div>
     </div>
@@ -547,9 +639,13 @@
     <div class="sidebar-block fade-in">
       <div class="section-label" data-lang="cs">Vzdělání</div>
       <div class="section-label" data-lang="en">Education</div>
+      <div class="section-label" data-lang="uk">Освіта</div>
       <div class="edu-degree" data-lang="cs">Mgr. – Biologie (fyziologie rostlin)</div>
       <div class="edu-degree" data-lang="en">MSc – Biology (Plant Physiology)</div>
-      <div class="edu-uni">Dněpropetrovská národní univerzita Olese Hončara</div>
+      <div class="edu-degree" data-lang="uk">Магістр – Біологія (фізіологія рослин)</div>
+      <div class="edu-uni" data-lang="cs">Dněpropetrovská národní univerzita Olese Hončara</div>
+      <div class="edu-uni" data-lang="en">Oles Honchar Dnipropetrovsk National University</div>
+      <div class="edu-uni" data-lang="uk">Дніпровський національний університет імені Олеся Гончара</div>
       <div class="edu-period">2009 – 2014</div>
     </div>
 
@@ -558,9 +654,11 @@
 
 <script>
   function setLang(lang) {
-    document.body.classList.toggle('lang-en', lang === 'en');
-    document.getElementById('btn-cs').classList.toggle('active', lang === 'cs');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.body.classList.remove('lang-cs', 'lang-en', 'lang-uk');
+    document.body.classList.add('lang-' + lang);
+    ['cs', 'en', 'uk'].forEach(function (l) {
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+    });
   }
 
   const observer = new IntersectionObserver((entries) => {
